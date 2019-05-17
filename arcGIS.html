@@ -27,18 +27,6 @@
                 basemap: "streets-vector"
             });
 
-            const symbol = {
-                type: "point-3d",
-                symbolLayers: [
-                    {
-                        type: "object",
-                        height: 10,
-                        resource: {
-                            href: "./tent.glb"
-                        }
-                    }
-                ]
-            };
             const webMap = new WebMap({                        // Define the web map reference
                 portalItem: {
                     id: "41281c51f9de45edaf1c8ed44bb10e30",
@@ -55,9 +43,9 @@
 
             var view = new MapView({
                 container: "viewDiv",
-                map: symbol
-                // center: [108.71511,34.09042],
-                // zoom: 10
+                map: map,
+                center: [108.71511,34.09042],
+                zoom: 10
             });
 
         });
